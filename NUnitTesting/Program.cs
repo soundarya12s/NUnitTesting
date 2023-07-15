@@ -10,7 +10,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter input to be executed\n1.Vending Machine\n2.Day of the week\n3.Exit");
+                Console.WriteLine("Enter input to be executed\n1.Vending Machine\n2.Day of the week\n3.Temperature Conversion\n4.Exit");
                 int input = Convert.ToInt32(Console.ReadLine());
                 switch (input)
                 {
@@ -21,7 +21,12 @@ namespace LogicalPrograms
                     case 2:
                         DayOfDate.getDay();
                         break;
+
                     case 3:
+                        Temperature temperature = new Temperature();
+                        temperature.ConvertTemperature();
+                        break;
+                    case 4:
                         flag=false;
                         break;
 
