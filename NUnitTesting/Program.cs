@@ -10,7 +10,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter input to be executed\n1.Vending Machine\n2.Day of the week\n3.Temperature Conversion\n4.Exit");
+                Console.WriteLine("Enter input to be executed\n1.Vending Machine\n2.Day of the week\n3.Temperature Conversion\n4.Monthly Payment\n5.Exit\n");
                 int input = Convert.ToInt32(Console.ReadLine());
                 switch (input)
                 {
@@ -27,8 +27,13 @@ namespace LogicalPrograms
                         temperature.ConvertTemperature();
                         break;
                     case 4:
-                        flag=false;
+                        MonthlyPayment monthlyPayment = new MonthlyPayment();
+                        monthlyPayment.GetAmount();
                         break;
+                    case 5:
+                        flag = false;
+                        break;
+
 
 
                 }
